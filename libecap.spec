@@ -1,6 +1,6 @@
 Name:       libecap
-Version:    0.2.0
-Release:    9%{?dist}
+Version:    1.0.0
+Release:    1%{?dist}
 Summary:    Squid interface for embedded adaptation modules
 License:    BSD
 Group:      Development/Libraries
@@ -65,6 +65,9 @@ install -m644 %{SOURCE1} %{buildroot}%{_includedir}/%{name}/common/autoconf.h
 %{_includedir}/libecap
 
 %changelog
+* Tue Apr 12 2016 Luboš Uhliarik <luhliari@redhat.com> - 1.0.0-1
+- Resolves: #1326254 - Rebase libecap to version 1.0.0
+
 * Mon Aug 11 2014 Michal Luscon <mluscon@redhat.com> - 0.2.0-9
 - Fixed: #1125685 - ppc64le architecture
 

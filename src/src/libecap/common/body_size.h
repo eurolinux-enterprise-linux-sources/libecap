@@ -14,8 +14,8 @@ class BodySize {
 		typedef uint64_t size_type;
 
 	public:
-		BodySize();
-		BodySize(size_type size);
+		BodySize(): size_(0), known_(false) {}
+		BodySize(size_type size): size_(size), known_(true) {}
 
 		bool known() const { return known_; }
 		size_type value() const { return known() ? size_ : badSize(); }

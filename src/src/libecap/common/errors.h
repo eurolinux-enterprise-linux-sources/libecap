@@ -37,7 +37,7 @@ extern void Throw(const char *message, const char *fileName, int lineNo);
 
 } // namespace libecap
 
-// Is there a way to add source code location without poluting the name space?
+// Is there a way to add source code location without polluting the name space?
 
 // Convenience macro to supply optional location arguments.
 #if !defined(TextExceptionHere)
@@ -47,8 +47,8 @@ extern void Throw(const char *message, const char *fileName, int lineNo);
 // Must(condition) is like assert(condition) but throws an exception instead
 #if !defined(Must)
 #   define Must(cond) ((cond) ? \
-        (void)0 : \
-        (void)libecap::Throw(#cond, __FILE__, __LINE__))
+		(void)0 : \
+		(void)libecap::Throw(#cond, __FILE__, __LINE__))
 #endif
 
 

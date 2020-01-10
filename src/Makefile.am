@@ -6,7 +6,7 @@ ACLOCAL_AMFLAGS = -I cfgaux
 
 pkgconfig_DATA = libecap.pc
 
-SUBDIRS	= src
+SUBDIRS	= src doc
 
 EXTRA_DIST = \
 	LICENSE \

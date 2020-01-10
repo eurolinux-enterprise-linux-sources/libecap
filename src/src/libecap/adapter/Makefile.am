@@ -3,7 +3,8 @@ noinst_LTLIBRARIES = \
 	libadapter.la
 
 libadapter_la_SOURCES = \
-	adapter.cc
+	service.cc \
+	xaction.cc
 
 include_adapter_pkgdir = ${pkgincludedir}/adapter
 

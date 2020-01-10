@@ -1,3 +1,39 @@
+v1.0.0
+2013/09/17
+
+	Set current library ABI version to 3:0:0, due to the following
+	API changes documented in doc/async.txt and doc/registration.txt:
+
+	- Support asynchronous (e.g., threaded) adapters to accommodate
+	  eCAP services that require long blocking operations or even
+	  implement their own I/O and event loops.
+
+	- Allow the host application to check the libecap version used
+	  to build the adapter module as well as the libecap version
+	  that the host application itself is being dynamically linked
+	  with. This prevents v1 host applications from accidentally
+	  loading v0 adapters and then mysteriously crashing.
+
+	- Allow adapters and their host application to share pointers to
+	  transactions by changing Service::makeXaction() result type to
+	  libecap::shared_ptr (the exact new return type is typedefed as
+	  Service::MadeXactionPointer). This change helps asynchronous
+	  adapters to safely catalog pending transactions. The host
+	  application remains the primary owner of the transaction, so
+	  adapters wishing to catalog transactions should probably use
+	  weak pointers (libecap::weak_ptr).
+
+	Other changes:
+
+	- Removed the Callable API and common/call.h. No users of that
+	experimental feature are known. Adapters and host applications
+	may continue to provide the callable() method if they are using
+	it themselves, but it was very unlikely to be used by the other
+	side of the transaction in v0 and will be ignored in v1.
+
+	- Polished source code.
+
+
 v0.2.0
 2011/02/18
 
@@ -13,7 +49,7 @@ v0.2.0
 	  unless we see it being used for something worth supporting;
 	  feedback welcomed!).
 
-	  Existing adapter::Xaction::configure()/reconfigure()
+	  Existing adapter::Service::configure()/reconfigure()
 	  implementations and callers will need to be adjusted to use
 	  the new Options argument.
 	

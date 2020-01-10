@@ -15,7 +15,7 @@ class Message {
 	public:
 		virtual ~Message() {}
 
-		// clones the header and body presense; does not copy the body itself
+		// clones the header and body presence; does not copy the body itself
 		virtual shared_ptr<Message> clone() const = 0;
 
 		// always present, determines direction

@@ -33,6 +33,6 @@ std::ostream &libecap::TextException::print(std::ostream &os) const {
 }
 
 void libecap::Throw(const char *message, const char *fileName, int lineNo) {
-	// the exception recepient should print the exception
+	// the exception recipient should print the exception
 	throw TextException(message, fileName, lineNo);
 }

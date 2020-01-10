@@ -96,7 +96,7 @@
 
 /* Define to the full name and version of this package. */
 #ifndef LIBECAP_PACKAGE_STRING 
-#define LIBECAP_PACKAGE_STRING  "eCAP Library 0.2.0" 
+#define LIBECAP_PACKAGE_STRING  "eCAP Library 1.0.0" 
 #endif
 
 /* Define to the one symbol short name of this package. */
@@ -111,7 +111,7 @@
 
 /* Define to the version of this package. */
 #ifndef LIBECAP_PACKAGE_VERSION 
-#define LIBECAP_PACKAGE_VERSION  "0.2.0" 
+#define LIBECAP_PACKAGE_VERSION  "1.0.0" 
 #endif
 
 /* Define to 1 if you have the ANSI C header files. */
@@ -121,7 +121,7 @@
 
 /* Version number of package */
 #ifndef LIBECAP_VERSION 
-#define LIBECAP_VERSION  "0.2.0" 
+#define LIBECAP_VERSION  "1.0.0" 
 #endif
 
 /* Define to empty if `const' does not conform to ANSI C. */

@@ -15,7 +15,7 @@ extern const size_type nsize; // same as std::string::npos
 
 class AreaDetails;
 
-// a continiuos, fixed-size buffer area
+// a continuous, fixed-size buffer area
 // no zero-termination is guaranteed
 class Area {
 	public:
@@ -33,10 +33,10 @@ class Area {
 
 		std::string toString() const; // expensive
 
-        // for safe conversion to bool, ignore
-        typedef const size_type Area::*SafeBool;
-        // false if empty; true otherwise
-        operator SafeBool() const { return size ? &Area::size : 0; }
+		// for safe conversion to bool, ignore
+		typedef const size_type Area::*SafeBool;
+		// false if empty; true otherwise
+		operator SafeBool() const { return size ? &Area::size : 0; }
 
 	public:
 		const char *start;

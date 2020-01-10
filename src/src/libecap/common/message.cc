@@ -2,5 +2,6 @@
 #include <libecap/common/errors.h>
 
 void libecap::Message::addTrailer() {
-    Must(false); // no trailer support by default
+	// no trailer support by default
+	Must(!"missing libecap::Message::addTrailer() implementation");
 }

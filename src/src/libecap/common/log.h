@@ -12,7 +12,7 @@ enum ImportanceLevel { ilDebug = 0, ilNormal = 1, ilCritical = 2 }; // 0xF
 enum FrequencyLevel { flOperation = 0, flXaction = 1 << 4, flApplication = 2 << 4}; // 0xF0
 enum MessageSizeLevel { mslNormal = 0, mslLarge = 1 << 8 }; // 0xF00
 
-// maintaines a mask that determines how verbose the log entry should be
+// maintains a mask that determines how verbose the log entry should be
 class LogVerbosity {
 	public:
 		typedef unsigned int Mask;

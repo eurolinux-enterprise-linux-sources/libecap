@@ -22,7 +22,7 @@ class Host {
 		virtual void describe(std::ostream &os) const = 0; // free-format info
 
 		// Service management
-		virtual void noteService(const weak_ptr<adapter::Service> &s) = 0;
+		virtual void noteVersionedService(const char *libEcapVersion, const weak_ptr<adapter::Service> &s) = 0;
 
 		// Logging
 		virtual std::ostream *openDebug(LogVerbosity lv) = 0;

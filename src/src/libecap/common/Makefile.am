@@ -21,7 +21,6 @@ include_common_pkg_HEADERS = \
 	errors.h \
 	log.h \
 	memory.h \
-	call.h \
 	area.h \
 	name.h \
 	names.h \
